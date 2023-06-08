@@ -1,0 +1,181 @@
+@import "../../mixins";
+
+.hero {
+  width: 100%;
+  background-image: url(../../../images/pattern.svg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 120px 0 69px 0;
+  .container {
+    .row {
+      flex-direction: column;
+      .homeHero {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        .leftSide {
+          width: 50%;
+          max-width: 389px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .homeContent {
+            .homeTitle {
+              font-weight: 700;
+              font-size: 48px;
+              line-height: 1.25;
+              margin-bottom: 12px;
+            }
+            .homeInfo {
+              color: #535861;
+              line-height: 1.5;
+              margin-bottom: 32px;
+            }
+            .btn {
+              @include primaryBtn();
+              width: 349px;
+            }
+          }
+          .preRegister {
+            .appInfo {
+              font-size: 12px;
+              line-height: 1.5;
+              color: #535861;
+            }
+            .downloadApp {
+              margin-top: 12px;
+              display: flex;
+              gap: 12px;
+              .mobileApp {
+                width: 135px;
+                height: 40px;
+                a {
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .rightSide {
+          width: 50%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .particpants {
+        width: 100%;
+        margin-top: 60px;
+        .marquee-container {
+          gap: 88px;
+          align-items: center;
+          .marquee {
+            gap: 88px;
+            align-items: center;
+            .initial-child-container {
+              align-items: center;
+              gap: 88px;
+              .child {
+                .slide {
+                  max-width: 180px;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Screen width 768px
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 80px;
+    .container {
+      .row {
+        padding: 26px 0;
+        .homeHero {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          .leftSide {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            .homeContent {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .homeTitle {
+                font-size: 36px;
+              }
+            }
+            .preRegister {
+              margin-top: 24px;
+            }
+          }
+          .rightSide {
+            margin-top: 56px;
+            width: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Screen width 368px
+@media (max-width: 368px) {
+  .hero {
+    .container {
+      .row {
+        .homeHero {
+          .leftSide {
+            .homeContent {
+              .homeTitle {
+                font-size: 24px;
+              }
+              .btn {
+                width: 100%;
+                max-width: 250px;
+                font-size: 10px;
+              }
+            }
+            .preRegister {
+              margin-top: 24px;
+              .downloadApp {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.header {
+  width: 100%;
+  position: fixed;
+  padding: 8px;
+  z-index: 999;
+  margin-top: 8px;
+  .container {
+    .row {
+      background-color: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(40px);
+      border-radius: 16px;
+      justify-content: space-between;
+      align-items: center;
+      .navBar {
+        .navList {
+          display: flex;
+          gap: 32px;
+          .navItem {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Screen width 768px
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+    position: fixed;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    .container {
+      .row {
+        padding: 26px 15px;
+        .navBar {
+          .navList {
+            display: flex;
+            .navItem {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.react-tel-input {
+  width: 100%;
+  height: 50px;
+  .invalid-number-message {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    background: transparent;
+    color: #ed4611;
+    &::before {
+      display: inline-block;
+      content: "";
+      background-image: url(../../images/icons/alert.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+      transform: translateY(5px);
+    }
+  }
+  .form-control {
+    width: 100%;
+    height: 100%;
+    &.focus {
+      border: 1px solid #115eed;
+    }
+    &.invalid-number {
+      border: 1px solid #ed4611;
+      background-color: #fff;
+      border-left-color: #fff;
+      &.focus {
+        border: 1px solid #ed4611;
+        background-color: #fff;
+        border-left-color: #fff;
+      }
+    }
+  }
+}

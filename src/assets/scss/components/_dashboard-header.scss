@@ -1,0 +1,138 @@
+.dashboardHeader {
+  width: 100%;
+  min-height: 78px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #cbddeb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #fff;
+  .outsildeClickOverlay {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  .searchBar {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid rgba(17, 94, 237, 0.25);
+    border-radius: 20px;
+    padding: 0 24px;
+    button {
+      border: 0;
+      outline: 0;
+      background-color: #fff;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    input {
+      width: 65%;
+      padding: 12px 0;
+      height: 100%;
+      border: 0;
+      outline: 0;
+      &::placeholder {
+        color: rgba(35, 39, 47, 0.25);
+      }
+    }
+    a {
+      font-size: 12px;
+      color: #115eed;
+    }
+  }
+  .account {
+    cursor: pointer;
+    position: relative;
+    .title {
+      img {
+        transition: transform 0.3s ease;
+        transform: rotate(0);
+      }
+      &.up {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .accountMenu {
+      display: flex;
+      opacity: 0;
+      visibility: hidden;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 4px;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      padding: 8px;
+      min-width: 304px;
+      background: #ffffff;
+      box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      transition: display 0.3s ease;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+      .accountMenuItem {
+        width: 100%;
+        a {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 12px;
+          color: #000;
+          background: #fff;
+          transition: 0.3s ease;
+          border-radius: 8px;
+          &:hover {
+            background: #115eed;
+            color: #fff;
+            img {
+              filter: invert(100%);
+            }
+          }
+        }
+        &.goPro {
+          a {
+            background: #115eed;
+            color: #fff;
+            &:hover {
+              img {
+                filter: invert(0%);
+              }
+            }
+          }
+        }
+      }
+      &.open {
+        // display: flex;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

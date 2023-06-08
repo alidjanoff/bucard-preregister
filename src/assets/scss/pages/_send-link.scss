@@ -1,0 +1,32 @@
+.sendLink {
+  width: 100%;
+  height: 100vh;
+  padding: 0 15px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 24px;
+  .infoText {
+    .phoneNumber {
+      color: #115eed;
+    }
+  }
+  .request {
+    line-height: 150%;
+    color: #535861;
+    .timer {
+      color: #115eed;
+      margin: 0 5px;
+    }
+  }
+  a {
+    color: #115eed;
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,193 @@
+.dashboardBoxes {
+  .sectionTitle {
+    font-weight: 500;
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 24px;
+  }
+  .boxes {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+    position: relative;
+    .outsideClickOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: transparent;
+      display: none;
+      &.isOpen {
+        display: block;
+      }
+    }
+    .box {
+      width: 24%;
+      border: 1px solid #cbddeb;
+      border-radius: 8px;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      transition: 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      background: #fff;
+      &.addBox {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        height: 160px;
+        border: 1px solid #115eed;
+        .boxTitle {
+          padding: 8px 12px;
+          background: #ffffff;
+          box-shadow: 0px 0px 12px rgba(35, 31, 32, 0.06);
+          border-radius: 14px;
+          font-weight: 500;
+          color: #000000;
+          position: relative;
+          transition: 0.3s ease;
+          transform: translateY(10px);
+          opacity: 0;
+          visibility: hidden;
+          &::after {
+            content: "";
+            position: absolute;
+            left: calc(50% - 6px);
+            top: calc(100% - 6px);
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0px 0px 12px rgba(35, 31, 32, 0.06);
+          }
+        }
+        &:hover {
+          .boxTitle {
+            transform: translateY(-20px);
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        .addIcon {
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          background: #f6f5f8;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: translateY(-25px);
+        }
+      }
+      &:nth-child(3) {
+        border: 1px solid #ffa700;
+      }
+      &:nth-child(4) {
+        border: 1px solid #12db63;
+      }
+      &.active {
+        border: 1px solid #115eed;
+      }
+      &:hover {
+        border: 1px solid #115eed;
+      }
+      .boxLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 32px;
+        .boxIcon {
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          background: #f6f5f8;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .emoji {
+            font-size: 24px;
+          }
+        }
+        .boxName {
+          font-weight: 500;
+          color: #23272f;
+        }
+      }
+      .boxRight {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 32px;
+        .boxCount {
+          display: flex;
+          justify-content: center;
+          gap: 6px;
+          .userCount {
+            font-weight: 500;
+            color: #000;
+          }
+        }
+      }
+      .boxOptions {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 8px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+        &.isOpen {
+          opacity: 1;
+          visibility: visible;
+        }
+        .option {
+          width: 100%;
+          padding: 10px 12px;
+          border: 1px solid #cbddeb;
+          border-radius: 8px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 10px;
+          transition: 0.3s ease;
+          &:hover {
+            background: #115eed;
+            img {
+              filter: invert(100%);
+            }
+            .optionInfo {
+              color: #fff;
+            }
+          }
+          img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+          }
+          .optionInfo {
+            font-weight: 500;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "header": {
+    "whatIs": "What is Bucard?",
+    "packets": "Packets",
+    "contact": "Contact"
+  },
+  "footer":{
+    "copyrights": "All rights reserved"
+  }
+}

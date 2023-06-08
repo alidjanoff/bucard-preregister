@@ -1,0 +1,158 @@
+@import "../mixins";
+
+.packetCard {
+  background: #ffffff;
+  border: 1px solid rgba(17, 94, 237, 0.12);
+  border-radius: 0px 0px 4px 4px;
+  font-weight: 500;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: 0.3s ease;
+  &:nth-child(1) {
+    background: #115eed;
+    border: 2px solid #115eed;
+    border-radius: 4px;
+    transform: scale(1.02);
+    .cardTitle {
+      color: #fff;
+    }
+    .cardPrice {
+      color: #fff;
+      span {
+        color: #fff;
+      }
+    }
+    .freePrice {
+      color: #fff;
+    }
+    .packetDiscount {
+      color: #fff;
+      .annually {
+        background: #12db63;
+        color: #fff;
+      }
+    }
+    .division {
+      background-color: #e1e7f2;
+    }
+    .featureList {
+      .listItem {
+        color: #fff;
+        &::after {
+          background-image: url(../../images/icons/check-solid-white.svg);
+        }
+      }
+    }
+    .cardBtn {
+      color: #115eed;
+      background-color: #fff;
+      transition: 0.3s ease;
+      &:hover {
+        background-color: #cccccc;
+      }
+    }
+  }
+  .cardTitle {
+    font-size: 18px;
+    color: #115eed;
+    font-weight: 400;
+    margin-bottom: 18px;
+  }
+  .cardPrice {
+    font-size: 32px;
+    color: #23272f;
+    margin-bottom: 18px;
+    span {
+      margin-left: 4px;
+      font-weight: 400;
+      font-size: 14px;
+      color: #535861;
+    }
+  }
+  .freePrice {
+    font-weight: 400;
+    font-size: 14px;
+    color: #535861;
+  }
+  .packetDiscount {
+    font-weight: 400;
+    font-size: 14px;
+    color: #535861;
+    display: flex;
+    align-items: center;
+    .annually {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 8px;
+      padding: 4px 8px;
+      height: 20px;
+      background: #12db63;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+  .division {
+    margin: 24px 0;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #e1e7f2;
+  }
+  .featureList {
+    .listItem {
+      font-weight: 500;
+      color: #535861;
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 20px;
+      &::after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 5px;
+        left: 0px;
+        background-image: url(../../images/icons/check-solid.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
+  }
+  .cardBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #115eed;
+    padding: 16px 48px;
+    border-radius: 4px;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 500;
+    font-size: 16px;
+    span {
+      color: #fff;
+      font-style: italic;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+    &:hover {
+      background: #0e4cbe;
+    }
+  }
+}
+
+@media (max-width: 368px) {
+  .packetCard {
+    font-size: 12px;
+  }
+}

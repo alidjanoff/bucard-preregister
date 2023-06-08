@@ -1,0 +1,16 @@
+.userGuide {
+  width: 100%;
+  padding-top: 25%;
+  text-align: center;
+  .title {
+    font-size: 50px;
+  }
+  a {
+    color: #1155ed;
+    font-size: 18px;
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

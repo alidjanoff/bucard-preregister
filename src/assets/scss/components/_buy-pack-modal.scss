@@ -1,0 +1,225 @@
+.checkoutModal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+  transition: opacity 0.3s ease;
+  transition: 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .modalOverlay {
+    background-color: #115eed25;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .modalBody {
+    position: relative;
+    width: 70%;
+    height: 580px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .modalBg {
+      width: 50%;
+      height: 100%;
+      background-image: url(../../images/buy-modal-bg.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .modalContent {
+      width: 50%;
+      height: 100%;
+      background-color: #fff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 24px;
+      .closeModal {
+        width: 48px;
+        height: 48px;
+        background: #f3f7ff;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s ease;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      .modalTitle {
+        width: 100%;
+        text-align: left;
+        font-weight: 700;
+        font-size: 24px;
+        color: #231f20;
+      }
+      .orderPack {
+        .changeBill {
+          display: flex;
+          gap: 16px;
+          margin-bottom: 24px;
+          .billBtn {
+            width: 50%;
+            min-width: 190px;
+            height: 74px;
+            background: #f3f7ff;
+            border-radius: 8px;
+            padding: 16px 24px 16px 24px;
+            border: 1px solid transparent;
+            transition: 0.3s ease;
+            cursor: pointer;
+            &:hover {
+              border-color: #115eed;
+              .btnHead {
+                color: #115eed;
+              }
+            }
+            &.activeBtn {
+              border-color: #115eed;
+              .btnHead {
+                color: #115eed;
+              }
+            }
+            .btnHead {
+              font-weight: 500;
+              color: #231f20;
+              .discount {
+                width: 48px;
+                height: 20px;
+                background: #12db63;
+                border-radius: 12px;
+                padding: 4px 8px;
+                font-weight: 500;
+                font-size: 12px;
+                color: #fff;
+                margin-left: 12px;
+              }
+            }
+            .btnContent {
+              font-size: 14px;
+              color: #535861;
+              span {
+                color: #535861;
+              }
+            }
+          }
+        }
+        .order {
+          border-top: 1px solid rgba(17, 94, 237, 0.12);
+          padding: 24px 0;
+          .priceList {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+            .priceItem {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              color: #231f20;
+            }
+          }
+          .billInfo {
+            font-size: 12px;
+            line-height: 1.35;
+            color: #535861;
+            margin-bottom: 24px;
+          }
+          .orderBtn {
+            width: 168px;
+            height: 38px;
+            border: 0;
+            outline: 0;
+            background: #115eed;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: 0.3s ease;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Screen width 1200px
+@media (max-width: 1200px) {
+  .checkoutModal {
+    .modalBody {
+      width: 85%;
+    }
+  }
+}
+
+// Screen width 1024px
+@media (max-width: 1200px) {
+  .checkoutModal {
+    .modalBody {
+      .modalBg {
+        display: none;
+      }
+      .modalContent {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Screen width 568px
+@media (max-width: 568px) {
+  .checkoutModal {
+    .modalBody {
+      .modalContent {
+        width: 100%;
+        gap: 8px;
+        padding: 12px;
+        .modalTitle {
+          font-size: 18px;
+        }
+        .orderPack {
+          .changeBill {
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 0;
+            .billBtn {
+              width: 100%;
+            }
+          }
+          .order {
+            margin-top: 12px;
+            .priceList {
+              gap: 8px;
+              margin-bottom: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

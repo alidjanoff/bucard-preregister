@@ -1,0 +1,74 @@
+.btnGroup {
+  width: 100%;
+  display: flex;
+  margin-bottom: 48px;
+  .tabBtn {
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    outline: 0;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: #fff;
+    border: 1px solid #115eed;
+    color: #115eed;
+    transition: 0.3s ease;
+    &:nth-child(1) {
+      border-radius: 4px 0 0 4px;
+    }
+    &:nth-child(2) {
+      border-radius: 0 4px 4px 0;
+    }
+    &.active {
+      background-color: #115eed;
+      border: 1px solid #115eed;
+      color: #fff;
+      &:nth-child(1) {
+        border-radius: 4px 0 0 4px;
+      }
+      &:nth-child(2) {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+  }
+}
+
+// Screen width 768px
+@media (max-width: 768px) {
+  .btnGroup {
+    display: flex;
+    .tabBtn {
+      width: 100%;
+      font-size: 14px;
+      padding: 14px 0;
+    }
+  }
+}
+
+// Screen width 368px
+@media (max-width: 368px) {
+  .btnGroup {
+    display: flex;
+    flex-wrap: wrap;
+    .tabBtn {
+      width: 100%;
+      font-size: 12px;
+      &:nth-child(1) {
+        border-radius: 4px 4px 0 0;
+      }
+      &:nth-child(2) {
+        border-radius: 0 0 4px 4px;
+      }
+      &.active {
+        &:nth-child(1) {
+          border-radius: 4px 4px 0 0;
+        }
+        &:nth-child(2) {
+          border-radius: 0 0 4px 4px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.packets {
+  width: 100%;
+  .container {
+    .row {
+      padding: 26px 30px;
+      flex-direction: column;
+      .packetsHead {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .packetsTitle {
+          width: 50%;
+          max-width: 300px;
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 1.35;
+          color: #23272f;
+        }
+        .btnGroup {
+          display: flex;
+          justify-content: flex-end;
+          width: 50%;
+        }
+      }
+      .selectPacket {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 32px 0;
+        
+        .packetCard {
+          width: 32%;
+        }
+      }
+    }
+  }
+}
+
+// Screen width 1024px
+@media (max-width: 1024px) {
+  .packets {
+    padding: 26px 56px;
+    .container {
+      .row {
+        padding: 0 15px;
+        .selectPacket {
+          padding: 0;
+          .businessBg {
+            display: none;
+          }
+          .packetCard {
+            width: 48%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Screen width 768px
+@media (max-width: 768px) {
+  .packets {
+    padding: 0 0 56px 0;
+    .container {
+      .row {
+        padding: 0 15px;
+        .packetsHead {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          gap: 24px;
+          .packetsTitle {
+            width: 100%;
+            max-width: 100%;
+          }
+          .btnGroup {
+            width: 100%;
+          }
+        }
+        .selectPacket {
+          padding: 0;
+          .packetCard {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
