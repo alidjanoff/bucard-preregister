@@ -1,18 +1,23 @@
 // Router
 import { Link } from "react-router-dom";
 
+// Translation
+import { useTranslation } from "react-i18next";
+
 const Notify = () => {
+  // Translation
+  const { t } = useTranslation();
+
   return (
     <section className="notify">
       <div className="container">
         <div className="row">
           <div className="notifyInfo">
             <h2 className="title">
-              Ön qeydiyyat ilə fəaliyyətə <br /> başlayan kimi ilk sən xəbərdar
-              ol!
+              {t("notify.title")} <br /> {t("notify.info")}
             </h2>
             <Link className="registerBtn" to="/register">
-              Qeydiyyatdan keç
+              {t("notify.btnValue")}
             </Link>
             <div className="pattern"></div>
           </div>

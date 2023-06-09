@@ -1,10 +1,73 @@
 {
   "header": {
     "whatIs": "What is Bucard?",
-    "packets": "Packets",
+    "packets": "Packages",
     "contact": "Contact"
   },
-  "footer":{
+  "hero": {
+    "title": "Bucard - Create Business Network!",
+    "info": "Sign up and take advantage of the initial user opportunities.",
+    "btnValue1": "Sign Up",
+    "btnValue2": "Free!",
+    "googlePlay": "Soon on Google Play Store and",
+    "appStore": "Download from the App Store."
+  },
+  "changePlan": {
+    "question": "What is Bucard?",
+    "personalInfo1": "Search opportunity based on location and profession",
+    "personalInfo2": "Networking with companies and individuals",
+    "personalInfo3": "Finding freelance or outsourced work",
+    "personalInfo4": "Convenient and simple communication",
+    "personalInfo5": "Sharing all your information from one platform",
+    "businessInfo1": "Promotion of your business",
+    "businessInfo2": "Search for partners and employees based on keywords, area, and rating",
+    "businessInfo3": "Development of business partnerships",
+    "businessInfo4": "Placement of branch networks",
+    "businessInfo5": "Easy and fast communication",
+    "personalBtnValue": "Personal",
+    "businessBtnValue": "Business"
+  },
+  "packets": {
+    "title": "Create your dream business profile!",
+    "month": "Monthly",
+    "year": "Yearly"
+  },
+  "packetCard": {
+    "yearly": "Yearly payment",
+    "everyYear": "every year",
+    "everyMonth": "every month",
+    "discount": "discount",
+    "freePlan": "This package is free!",
+    "btnValue": "Get it soon"
+  },
+  "notify": {
+    "title": "Stay informed from the moment you start with pre-registration!",
+    "info": "Sign up now!",
+    "btnValue": "Sign Up"
+  },
+  "register": {
+    "goBack": "Homepage",
+    "formTitle": "Pre-registration",
+    "info": "Be one of the first users!",
+    "label": "Email",
+    "inputPlaceholder": "example@gmail.com",
+    "btnValue": "Sign Up!",
+    "trimError": "Email address cannot be empty",
+    "requiredError": "Please enter your email",
+    "matchesError": "Email format is incorrect."
+  },
+  "registerInfo": {
+    "title": "Your pre-registration is complete. You will receive a notification when the project starts.",
+    "thanks": "Thank you for your attention!",
+    "you": "You",
+    "redirect": "will be redirected to the main page in seconds.",
+    "goBack": "Go to the Homepage now"
+  },
+  "notFound": {
+    "title": "The requested page was not found",
+    "goBack": "Go back to the Homepage"
+  },
+  "footer": {
     "copyrights": "All rights reserved"
   }
 }

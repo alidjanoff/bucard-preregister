@@ -13,18 +13,24 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 import { object, string } from "yup";
 
+// Translation
+import { useTranslation } from "react-i18next";
+
 const Register = () => {
+  // Translation
+  const { t } = useTranslation();
+
   // Router
   const navigate = useNavigate();
 
   // Yup schema
   const emailSchema = object({
     email: string()
-      .trim("Mail ünvanı boş ola bilməz")
-      .required("Zəhmət olmasa mailnizi yazın")
+      .trim(t("register.trimError"))
+      .required(t("register.requiredError"))
       .matches(
         /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-        "Mail formatı düzgün deyil."
+        t("register.matchesError")
       ),
   });
 
@@ -51,23 +57,23 @@ const Register = () => {
             <div className="formHeader">
               <Link className="navigate" to="/">
                 <img src={backArrow} alt="go-back" />
-                <p className="navigateInfo">Ana səhifə</p>
+                <p className="navigateInfo">{t("register.goBack")}</p>
               </Link>
               <LanguageSelector />
             </div>
             <div className="formSteps">
               <form className="registerForm" onSubmit={handleSubmit(onSubmit)}>
-                <h2 className="formTitle">Ön qeydiyyat</h2>
-                <p className="info">İlk istifadəçilərdən olun!</p>
+                <h2 className="formTitle">{t("register.formTitle")}</h2>
+                <p className="info">{t("register.info")}</p>
                 <div className="inputBox">
                   <label htmlFor="email" className="email">
-                    Mail *
+                    {t("register.label")} *
                   </label>
                   <input
                     className="formInp"
                     id="email"
                     name="email"
-                    placeholder="nümunə@gmail.com"
+                    placeholder={t("register.inputPlaceholder")}
                     {...register("email")}
                   />
                   {errors.email && (
@@ -75,7 +81,7 @@ const Register = () => {
                   )}
                 </div>
                 <button className="registerBtn" disabled={errors.email && true}>
-                  Qeydiyyatdan keç!
+                  {t("register.btnValue")}
                 </button>
               </form>
             </div>
