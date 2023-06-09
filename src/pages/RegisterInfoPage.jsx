@@ -3,7 +3,13 @@ import { useEffect, useState } from "react";
 // Router
 import { Link, useNavigate } from "react-router-dom";
 
+// Translation
+import { useTranslation } from "react-i18next";
+
 const RegisterInfoPage = () => {
+  // Translation
+  const { t } = useTranslation();
+
   //   Router
   const navigate = useNavigate();
 
@@ -24,16 +30,13 @@ const RegisterInfoPage = () => {
   return (
     <main>
       <section className="registerInfoPage">
-        <h3 className="infoText">
-          Ön qeydiyyatınız tamamlandı. Layihə başladığı zaman sizə bildiriş
-          göndəriləcək.
-        </h3>
-        <p className="request">Diqqətiniz üçün təşəkkür edirik !</p>
+        <h3 className="infoText">{t("registerInfo.title")}</h3>
+        <p className="request">{t("registerInfo.thanks")}</p>
         <p className="request">
-          Siz <span className="timer">{count}</span> saniyə sonra əsas səhifəyə
-          yönləndiriləcəksiz.
+          {t("registerInfo.you")} <span className="timer">{count}</span>{" "}
+          {t("registerInfo.redirect")}
         </p>
-        <Link to="/">Əsas səhifəyə indi get</Link>
+        <Link to="/">{t("registerInfo.goBack")}</Link>
       </section>
     </main>
   );

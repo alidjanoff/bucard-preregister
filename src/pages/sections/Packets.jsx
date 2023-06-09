@@ -6,7 +6,14 @@ import PacketCard from "../../components/PacketCard";
 // Fake DB
 import packetsData from "../../db/packetsData";
 
+// Translation
+import { useTranslation } from "react-i18next";
+
 const Packets = () => {
+  // Translation
+  const { t } = useTranslation();
+
+  // Local state
   const [anually, setAnually] = useState(false);
 
   return (
@@ -14,21 +21,19 @@ const Packets = () => {
       <div className="container">
         <div className="row">
           <div className="packetsHead">
-            <h2 className="packetsTitle">
-              Xəyalındakı biznes profilini yarat!
-            </h2>
+            <h2 className="packetsTitle">{t("packets.title")}</h2>
             <div className="btnGroup">
               <button
                 className={anually ? "tabBtn" : "tabBtn active"}
                 onClick={() => setAnually(false)}
               >
-                Aylıq
+                {t("packets.month")}
               </button>
               <button
                 className={anually ? "tabBtn active" : "tabBtn"}
                 onClick={() => setAnually(true)}
               >
-                İllik
+                {t("packets.year")}
               </button>
             </div>
           </div>

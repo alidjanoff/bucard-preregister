@@ -1,12 +1,13 @@
 const packetsData = [
   {
     id: 1,
-    title: "Ödənişsiz",
+    titleAz: "Ödənişsiz",
+    titleEn: "Free",
+    titleRu: "Бесплатно",
     price: 0,
-    info: "Əlaqələri genişləndir",
     discount: false,
     percent: 0,
-    details: [
+    detailsAz: [
       {
         id: 1,
         detail: "Kontaktları əldə etmək",
@@ -24,15 +25,52 @@ const packetsData = [
         detail: "NFC / QR paylaşım",
       },
     ],
+    detailsEn: [
+      {
+        id: 1,
+        detail: "Get contacts",
+      },
+      {
+        id: 2,
+        detail: "Create unlimited cards",
+      },
+      {
+        id: 3,
+        detail: "Limited personal information",
+      },
+      {
+        id: 4,
+        detail: "NFC / QR sharing",
+      },
+    ],
+    detailsRu: [
+      {
+        id: 1,
+        detail: "Получение контактов",
+      },
+      {
+        id: 2,
+        detail: "Создание неограниченного количества карточек",
+      },
+      {
+        id: 3,
+        detail: "Ограниченная личная информация",
+      },
+      {
+        id: 4,
+        detail: "Обмен NFC / QR",
+      },
+    ],
   },
   {
     id: 2,
-    title: "Şəxsi",
+    titleAz: "Şəxsi",
+    titleEn: "Personal",
+    titleRu: "Личный",
     price: 2.9,
-    info: "Platformanın alətləri ilə tanış olun.",
     discount: true,
     percent: 10,
-    details: [
+    detailsAz: [
       {
         id: 1,
         detail: "Kontaktları əldə etmək",
@@ -66,15 +104,84 @@ const packetsData = [
         detail: "Video təqdimat",
       },
     ],
+    detailsEn: [
+      {
+        id: 1,
+        detail: "Get contacts",
+      },
+      {
+        id: 2,
+        detail: "Create unlimited cards",
+      },
+      {
+        id: 3,
+        detail: "NFC / QR sharing",
+      },
+      {
+        id: 4,
+        detail: "Detailed profile information",
+      },
+      {
+        id: 5,
+        detail: "Portfolio works",
+      },
+      {
+        id: 6,
+        detail: "Key words for search",
+      },
+      {
+        id: 7,
+        detail: "Add location on the map",
+      },
+      {
+        id: 8,
+        detail: "Video presentation",
+      },
+    ],
+    detailsRu: [
+      {
+        id: 1,
+        detail: "Get contacts",
+      },
+      {
+        id: 2,
+        detail: "Create unlimited cards",
+      },
+      {
+        id: 3,
+        detail: "NFC / QR sharing",
+      },
+      {
+        id: 4,
+        detail: "Detailed profile information",
+      },
+      {
+        id: 5,
+        detail: "Portfolio works",
+      },
+      {
+        id: 6,
+        detail: "Key words for search",
+      },
+      {
+        id: 7,
+        detail: "Add location on the map",
+      },
+      {
+        id: 8,
+        detail: "Video presentation",
+      },
+    ],
   },
   {
     id: 3,
-    title: "Biznes",
+    titleAz: "Biznes",
+    titleEn: "Business",
+    titleRu: "Бизнес",
     price: 19.9,
-    info: "Platformanın alətləri ilə tanış olun",
     discount: true,
     percent: 15,
-    details: [
+    detailsAz: [
       {
         id: 1,
         detail: "Kontaktları əldə etmək",
@@ -118,6 +225,98 @@ const packetsData = [
       {
         id: 11,
         detail: "Biznes kataloqda yer almaq",
+      },
+    ],
+    detailsEn: [
+      {
+        id: 1,
+        detail: "Get contacts",
+      },
+      {
+        id: 2,
+        detail: "Create unlimited cards",
+      },
+      {
+        id: 3,
+        detail: "NFC / QR sharing",
+      },
+      {
+        id: 4,
+        detail: "Detailed profile information",
+      },
+      {
+        id: 5,
+        detail: "Portfolio works",
+      },
+      {
+        id: 6,
+        detail: "Key words for search",
+      },
+      {
+        id: 7,
+        detail: "Add branch on the map",
+      },
+      {
+        id: 8,
+        detail: "Video presentation",
+      },
+      {
+        id: 9,
+        detail: "Add service",
+      },
+      {
+        id: 10,
+        detail: "Add product",
+      },
+      {
+        id: 11,
+        detail: "Get listed in business directory",
+      },
+    ],
+    detailsRu: [
+      {
+        id: 1,
+        detail: "Получение контактов",
+      },
+      {
+        id: 2,
+        detail: "Создание неограниченного количества карточек",
+      },
+      {
+        id: 3,
+        detail: "Обмен NFC / QR",
+      },
+      {
+        id: 4,
+        detail: "Подробная информация в профиле",
+      },
+      {
+        id: 5,
+        detail: "Портфолио работ",
+      },
+      {
+        id: 6,
+        detail: "Ключевые слова для поиска",
+      },
+      {
+        id: 7,
+        detail: "Добавление филиала на карту",
+      },
+      {
+        id: 8,
+        detail: "Видео презентация",
+      },
+      {
+        id: 9,
+        detail: "Добавление услуги",
+      },
+      {
+        id: 10,
+        detail: "Добавление продукта",
+      },
+      {
+        id: 11,
+        detail: "Размещение в бизнес-каталоге",
       },
     ],
   },

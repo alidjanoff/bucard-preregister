@@ -20,6 +20,7 @@ const LanguageSelector = () => {
 
   return (
     <div className="selectLang" onClick={() => setLangBoxOpen(!langBoxOpen)}>
+      <div className={`outside ${langBoxOpen && "active"}`}></div>
       <img
         src={
           i18n.language === "az" ||

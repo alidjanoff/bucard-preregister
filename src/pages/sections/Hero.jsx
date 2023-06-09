@@ -6,7 +6,13 @@ import googlePlay from "../../assets/images/icons/google-play.svg";
 import appStore from "../../assets/images/icons/app-store.svg";
 import banner from "../../assets/images/banner.png";
 
+// Translation
+import { useTranslation } from "react-i18next";
+
 const Hero = () => {
+  // Translation
+  const { t } = useTranslation();
+
   return (
     <section className="hero" id="hero">
       <div className="container">
@@ -14,18 +20,15 @@ const Hero = () => {
           <div className="homeHero">
             <div className="leftSide">
               <div className="homeContent">
-                <h1 className="homeTitle">Bucard - Biznes şəbəkəni yarat!</h1>
-                <p className="homeInfo">
-                  Ön qeydiyyatdan keç və ilk istifadəçi imkanlarından yaratlan.
-                </p>
+                <h1 className="homeTitle">{t("hero.title")}</h1>
+                <p className="homeInfo">{t("hero.info")}</p>
                 <Link className="btn" to="/register">
-                  Qeydiyyatdan keç / <span>Ödənişsiz!</span>
+                  {t("hero.btnValue1")} / <span>{t("hero.btnValue2")}</span>
                 </Link>
               </div>
               <div className="preRegister">
                 <p className="appInfo">
-                  Tezliklə Google Play Store və <br /> App Store-dən yükləyə
-                  biləcəksiz.
+                  {t("hero.googlePlay")} <br /> {t("hero.appStore")}
                 </p>
                 <div className="downloadApp">
                   <div className="mobileApp">

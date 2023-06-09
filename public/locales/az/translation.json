@@ -4,6 +4,69 @@
     "packets": "Paketlər",
     "contact": "Əlaqə"
   },
+  "hero": {
+    "title": "Bucard - Biznes şəbəkəni yarat!",
+    "info": "Ön qeydiyyatdan keç və ilk istifadəçi imkanlarından yaratlan.",
+    "btnValue1": "Qeydiyyatdan keç",
+    "btnValue2": "Ödənişsiz!",
+    "googlePlay": "Tezliklə Google Play Store və",
+    "appStore": "App Store-dən yükləyə biləcəksiz."
+  },
+  "changePlan": {
+    "question": "Bucard nədir?",
+    "personalInfo1": "Məkan və peşəyə görə axtarış imkanı",
+    "personalInfo2": "Şirkətlər və fərdi şəxslərlə tanışlıq (Netvörkinq)",
+    "personalInfo3": "Freelance və ya outsource iş tapmaq imkanı",
+    "personalInfo4": "Rahat və sadə kommunikasiya",
+    "personalInfo5": "Bütün məlumatlarının 1 platformadan paylaşılması",
+    "businessInfo1": "Biznesinizin tanıtımı",
+    "businessInfo2": "Keyvördlər, ərazi və reytinq əsasında əməkdaş axtarışı",
+    "businessInfo3": "Biznes partnyorluğun inkişafı",
+    "businessInfo4": "Filial şəbəkələrinin yerləşdirilməsi",
+    "businessInfo5": "Asan və sürətli kommunikasiya",
+    "personalBtnValue": "Şəxsi",
+    "businessBtnValue": "Biznes"
+  },
+  "packets": {
+    "title": "Xəyalındakı biznes profilini yarat!",
+    "month": "Aylıq",
+    "year": "İllik"
+  },
+  "packetCard": {
+    "yearly": "İllik ödənişdə",
+    "everyYear": "hər il",
+    "everyMonth": "hər ay",
+    "discount": "endirim",
+    "freePlan": "Bu paket ödənişsizdir !",
+    "btnValue": "Tezliklə əldə edə biləcəksiniz"
+  },
+  "notify": {
+    "title": "Ön qeydiyyat ilə fəaliyyətə",
+    "info": "başlayan kimi ilk sən xəbərdar ol!",
+    "btnValue": "Qeydiyyatdan keç"
+  },
+  "register": {
+    "goBack": "Ana səhifə",
+    "formTitle": "Ön qeydiyyat",
+    "info": "İlk istifadəçilərdən olun!",
+    "label": "Mail",
+    "inputPlaceholder": "nümunə@gmail.com",
+    "btnValue": "Qeydiyyatdan keç!",
+    "trimError": "Mail ünvanı boş ola bilməz",
+    "requiredError": "Zəhmət olmasa mailnizi yazın",
+    "matchesError": "Mail formatı düzgün deyil."
+  },
+  "registerInfo": {
+    "title": "Ön qeydiyyatınız tamamlandı. Layihə başladığı zaman sizə bildiriş göndəriləcək.",
+    "thanks": "Diqqətiniz üçün təşəkkür edirik !",
+    "you": "Siz",
+    "redirect": "saniyə sonra əsas səhifəyə yönləndiriləcəksiz.",
+    "goBack": "Əsas səhifəyə indi get"
+  },
+  "notFound": {
+    "title": "Axtardığınız səhifə tapılmadı",
+    "goBack": "Əsas səhifəyə geri dönün"
+  },
   "footer": {
     "copyrights": "Bütün hüquqlar qorunur"
   }
