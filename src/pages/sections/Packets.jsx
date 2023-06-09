@@ -10,7 +10,7 @@ const Packets = () => {
   const [anually, setAnually] = useState(false);
 
   return (
-    <section className="packets">
+    <section className="packets" id="bucardPackets">
       <div className="container">
         <div className="row">
           <div className="packetsHead">

@@ -8,7 +8,7 @@ import banner from "../../assets/images/banner.png";
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="container">
         <div className="row">
           <div className="homeHero">

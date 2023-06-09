@@ -1,5 +1,5 @@
 // Router
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Images
 import backArrow from "../assets/images/icons/back-arrow.svg";
@@ -14,6 +14,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { object, string } from "yup";
 
 const Register = () => {
+  // Router
+  const navigate = useNavigate();
+
   // Yup schema
   const emailSchema = object({
     email: string()
@@ -21,7 +24,7 @@ const Register = () => {
       .required("Zəhmət olmasa mailnizi yazın")
       .matches(
         /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-        "Mail formatı düzgün deyil"
+        "Mail formatı düzgün deyil."
       ),
   });
 
@@ -35,7 +38,10 @@ const Register = () => {
   });
 
   // Send data to api from here
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    navigate("/register-info-page");
+  };
 
   return (
     <main>
@@ -54,7 +60,9 @@ const Register = () => {
                 <h2 className="formTitle">Ön qeydiyyat</h2>
                 <p className="info">İlk istifadəçilərdən olun!</p>
                 <div className="inputBox">
-                  <label htmlFor="email">Mail *</label>
+                  <label htmlFor="email" className="email">
+                    Mail *
+                  </label>
                   <input
                     className="formInp"
                     id="email"

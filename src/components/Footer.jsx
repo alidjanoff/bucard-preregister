@@ -17,7 +17,7 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="footer">
+    <footer className="footer" id="contacts">
       <div className="container">
         <div className="row">
           <div className="siteInfo">

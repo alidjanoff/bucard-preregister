@@ -7,7 +7,7 @@ const ChangePlan = () => {
   const [businessPlan, setBusinessPlan] = useState(false);
 
   return (
-    <section className="changePlan">
+    <section className="changePlan" id="whatIsBucard">
       <div className="row">
         <div className="leftSide">
           <h2 className="tabTitle">Bucard nədir?</h2>

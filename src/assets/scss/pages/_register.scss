@@ -28,6 +28,7 @@
         }
       }
       .formSteps {
+        width: 100%;
         padding: 70px 0;
         max-width: 390px;
         .registerForm {
@@ -36,17 +37,25 @@
             font-weight: 500;
             font-size: 32px;
             color: #23272f;
+            margin-bottom: 16px;
           }
           .info {
             color: #535861;
           }
           .inputBox {
             width: 100%;
+            margin: 32px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             .email {
+              width: 100%;
               font-size: 14px;
               color: #535861;
+              margin-bottom: 12px;
             }
             .formInp {
+              width: 100%;
               border: 0;
               outline: 0;
               background: #ffffff;

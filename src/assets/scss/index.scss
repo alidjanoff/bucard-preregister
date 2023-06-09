@@ -4,51 +4,17 @@
 // ? Components
 @import "./components/header";
 @import "./components/footer";
-@import "./components/statistic-card";
 @import "./components/button-group";
 @import "./components/packet-card";
 @import "./components/language-selector";
-@import "./components/phone-input";
-@import "./components/dashboard-header";
-@import "./components/side-bar";
-@import "./components/dashboard-pages";
-@import "./components/buy-pack-modal";
-@import "./components/add-new-box-modal";
-@import "./components/add-profile-modal";
-@import "./components/profile-card";
-@import "./components/checkbox";
-@import "./components/search-to-box-modal";
-
-// ! Forms
-@import "./components/forms/step-one";
-@import "./components/forms/step-two";
-@import "./components/forms/step-three";
-@import "./components/forms/login-form";
-@import "./components/forms/forgot-form";
-@import "./components/forms/recover-form";
 
 // * Sections
 @import "./pages/sections/hero";
 @import "./pages/sections/change-plan";
-@import "./pages/sections/statistic";
 @import "./pages/sections/packets";
 @import "./pages/sections/notify";
 
 // * Pages
 @import "./pages/register";
-@import "./pages/login";
-@import "./pages/forgot-password";
-@import "./pages/send-link";
-@import "./pages/forgot-password";
-@import "./pages/recover-password";
-@import "./pages/choose-pack";
-@import "./pages/search";
-@import "./pages/company-page";
+@import "./pages/register-info-page";
 @import "./pages/not-found";
-@import "./pages/search-result";
-@import "./pages/box-details";
-
-// * Dashboardpages
-@import "./pages/dashboardPages/boxes";
-@import "./pages/dashboardPages/companies";
-@import "./pages/dashboardPages/user-guide";
