@@ -38,7 +38,7 @@ const LanguageSelector = () => {
       <ul className={langBoxOpen ? "langBox active" : "langBox"}>
         <li className="lang" id="az-AZ" onClick={() => changeLanguage("az")}>
           <img src={azFlag} alt="az" />
-          Azerbaijani
+          Azərbaycanca
         </li>
         <li className="lang" id="en-US" onClick={() => changeLanguage("en")}>
           <img src={enFlag} alt="en" />
@@ -46,7 +46,7 @@ const LanguageSelector = () => {
         </li>
         <li className="lang" id="ru-RU" onClick={() => changeLanguage("ru")}>
           <img src={ruFlag} alt="ru" />
-          Russian
+          Русский
         </li>
       </ul>
     </div>

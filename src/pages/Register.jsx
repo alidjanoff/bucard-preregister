@@ -1,6 +1,9 @@
 // Router
 import { Link, useNavigate } from "react-router-dom";
 
+// Axios
+import axios from "axios";
+
 // Images
 import backArrow from "../assets/images/icons/back-arrow.svg";
 
@@ -44,9 +47,16 @@ const Register = () => {
   });
 
   // Send data to api from here
-  const onSubmit = (data) => {
-    console.log(data);
-    navigate("/register-info-page");
+  const onSubmit = async (data) => {
+    await axios
+      .post(process.env.REACT_APP_PRE_REGISTER, data)
+      .then((res) => {
+        console.log(res);
+        navigate("/register-info-page");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
