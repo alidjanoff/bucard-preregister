@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // Router
 import { Link, useNavigate } from "react-router-dom";
 
@@ -9,6 +11,7 @@ import backArrow from "../assets/images/icons/back-arrow.svg";
 
 // Components
 import LanguageSelector from "../components/LanguageSelector";
+import Loading from "../components/Loading";
 
 // React hook form
 import { useForm } from "react-hook-form";
@@ -19,7 +22,20 @@ import { object, string } from "yup";
 // Translation
 import { useTranslation } from "react-i18next";
 
+// Google login
+// import { GoogleOAuthProvider } from "@react-oauth/google";
+// import { GoogleLogin } from "@react-oauth/google";
+
+// JWT DECODER
+// import jwt_decode from "jwt-decode";
+
 const Register = () => {
+  // JWT DECODER
+  // const [googleUser, setGoogleUser] = useState({});
+
+  // Local states
+  const [loading, setLoading] = useState(false);
+
   // Translation
   const { t } = useTranslation();
 
@@ -48,20 +64,23 @@ const Register = () => {
 
   // Send data to api from here
   const onSubmit = async (data) => {
+    setLoading(true);
     await axios
       .post(process.env.REACT_APP_PRE_REGISTER, data)
       .then((res) => {
-        console.log(res);
+        setLoading(false);
         navigate("/register-info-page");
       })
       .catch((err) => {
         console.log(err);
+        setLoading(false);
       });
   };
 
   return (
     <main>
       <section className="register">
+        {loading && <Loading />}
         <div className="screen">
           <div className="leftSide">
             <div className="formHeader">
@@ -75,6 +94,24 @@ const Register = () => {
               <form className="registerForm" onSubmit={handleSubmit(onSubmit)}>
                 <h2 className="formTitle">{t("register.formTitle")}</h2>
                 <p className="info">{t("register.info")}</p>
+                {/* <div className="socialBtns">
+                  <GoogleOAuthProvider
+                    clientId={process.env.REACT_APP_CLIENT_ID}
+                  >
+                    <GoogleLogin
+                      onSuccess={(credentialResponse) => {
+                        console.log(credentialResponse);
+                        const decoded = jwt_decode(
+                          credentialResponse.credential
+                        );
+                        console.log(decoded);
+                      }}
+                      onError={() => {
+                        console.log("Login Failed");
+                      }}
+                    />
+                  </GoogleOAuthProvider>
+                </div> */}
                 <div className="inputBox">
                   <label htmlFor="email" className="email">
                     {t("register.label")} *
