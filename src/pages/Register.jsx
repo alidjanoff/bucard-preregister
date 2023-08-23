@@ -72,8 +72,8 @@ const Register = () => {
         navigate("/register-info-page");
       })
       .catch((err) => {
-        console.log(err);
         setLoading(false);
+        navigate("/error");
       });
   };
 
