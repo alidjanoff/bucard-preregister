@@ -14,7 +14,7 @@ const RegisterInfoPage = () => {
   const navigate = useNavigate();
 
   // Local states
-  const [count, setCount] = useState(30);
+  const [count, setCount] = useState(15);
 
   useEffect(() => {
     if (count > 0) {

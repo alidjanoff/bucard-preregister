@@ -8,6 +8,11 @@ import NotFound from "./pages/NotFound";
 import RegisterInfoPage from "./pages/RegisterInfoPage";
 
 const App = () => {
+  console.log(
+    '%cDİQQƏT !!! Bura daxil olmaq çox təhlükəlidir. Bura yalnız "Developer"-lər üçündür !!!',
+    "color: white; font-size: 30px; background-color: red; font-weight: 900; text-align: center;"
+  );
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
