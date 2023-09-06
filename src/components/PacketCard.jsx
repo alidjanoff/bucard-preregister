@@ -16,7 +16,7 @@ const PacketCard = ({ data, state }) => {
     let anually = (data.price * 12).toFixed(2);
     let discountedPrice = (anually * data.percent) / 100;
     let total = anually - discountedPrice;
-    setAnuallyPrice(Number(total.toFixed(2)));
+    setAnuallyPrice(Number(Math.floor(total)));
   }, [data]);
 
   return (
@@ -41,7 +41,7 @@ const PacketCard = ({ data, state }) => {
           <p className="packetDiscount">
             {t("packetCard.yearly")}
             <span className="annually">
-              {data.percent}% {t("packetCard.discount")}
+              {Math.floor(data.percent)}% {t("packetCard.discount")}
             </span>
           </p>
         )

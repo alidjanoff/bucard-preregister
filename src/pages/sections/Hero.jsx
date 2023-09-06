@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Images
 import googlePlay from "../../assets/images/icons/google-play.svg";
 import appStore from "../../assets/images/icons/app-store.svg";
-import banner from "../../assets/images/banner.png";
+import banner from "../../assets/images/banner.svg";
 
 // Translation
 import { useTranslation } from "react-i18next";

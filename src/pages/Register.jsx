@@ -65,16 +65,17 @@ const Register = () => {
   // Send data to api from here
   const onSubmit = async (data) => {
     setLoading(true);
-    await axios
-      .post(process.env.REACT_APP_PRE_REGISTER, data)
-      .then((res) => {
-        setLoading(false);
-        navigate("/register-info-page");
-      })
-      .catch((err) => {
-        setLoading(false);
-        navigate("/error");
-      });
+
+    try {
+      await axios.post(process.env.REACT_APP_PRE_REGISTER, data);
+      await axios.post(process.env.REACT_APP_PRE_REGISTER_EMAIL, data);
+
+      setLoading(false);
+      navigate("/register-info-page");
+    } catch (err) {
+      setLoading(false);
+      navigate("/error");
+    }
   };
 
   return (
