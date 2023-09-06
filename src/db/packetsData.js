@@ -67,9 +67,9 @@ const packetsData = [
     titleAz: "Şəxsi",
     titleEn: "Personal",
     titleRu: "Личный",
-    price: 2.9,
+    price: 3.5,
     discount: true,
-    percent: 10,
+    percent: 16.66,
     detailsAz: [
       {
         id: 1,
@@ -178,9 +178,9 @@ const packetsData = [
     titleAz: "Biznes",
     titleEn: "Business",
     titleRu: "Бизнес",
-    price: 19.9,
+    price: 20,
     discount: true,
-    percent: 15,
+    percent: 16.66,
     detailsAz: [
       {
         id: 1,

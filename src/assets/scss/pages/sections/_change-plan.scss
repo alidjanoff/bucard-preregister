@@ -43,11 +43,11 @@
     }
     .rightSide {
       width: 50%;
-      background: url(../../../images/changePlan-bg.png) no-repeat center center;
+      background: url(../../../images/changePlan-bg.svg) no-repeat left center;
       background-size: cover;
       transition: 0.3s ease;
       &.active {
-        background: url(../../../images/business-bg.svg) no-repeat center center;
+        background: url(../../../images/business-bg.svg) no-repeat left center;
         background-size: cover;
         transition: 0.3s ease;
       }
@@ -75,9 +75,15 @@
       .rightSide {
         width: 100%;
         height: 576px;
-        background: url(../../../images/changePlan-bg-responsive.png) no-repeat
-          center center;
-        background-size: cover;
+        background: url(../../../images/changePlan-bg-responsive.svg) no-repeat
+          left center;
+        background-size: contain;
+        &.active {
+          background: url(../../../images/business-mobile.svg) no-repeat left
+            center;
+          background-size: contain;
+          transition: 0.3s ease;
+        }
       }
     }
   }
